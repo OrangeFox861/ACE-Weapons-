@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "ace+\sprites\PSO_1"
+	"$translucent" 1
+}

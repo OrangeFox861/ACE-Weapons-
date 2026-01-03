@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "ace+\sprites\RPG26"
+			"$translucent" 1
+}

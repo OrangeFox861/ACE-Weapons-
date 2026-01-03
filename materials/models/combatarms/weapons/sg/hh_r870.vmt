@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/combatarms/weapons/sg/HH_R870"
+	"$alphatest" 1
+}

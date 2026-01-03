@@ -1,0 +1,36 @@
+VertexLitGeneric
+{
+	"$basetexture" "models/weapons/tfa_ins2\stalker_comrade\rpg29\Tex_0004_0"
+	"$bumpmap"     "models/weapons/tfa_ins2\stalker_comrade\rpg29\Tex_0004_0_n"
+
+
+	"$envmap" "env_cubemap"
+	"$surfaceprop" "metal"
+	"$envmapmask" "models/weapons/tfa_ins2\stalker_comrade\rpg29\Tex_0004_0"
+	"$envmapcontrast" 1
+	"$envmapsaturation" 1
+	"$envmaptint" "[ .5 .5 .75]"
+"$nocull" "1"
+"$glow" "1"
+
+"$reflectivity" "[.5 .5 .5]"
+	$model "1"
+
+"$ssbump" "1"
+"$parallaxmapscale" "1" 
+"$rimlightboost" "0.1"
+"$rimmask" "1"
+"$rimlight" "1"
+"$rimlightexponent" "111"
+
+	"$halflambert" "1"
+		$phong 1
+	$phongboost 1
+	$phongexponent 10
+	$phongfresnelranges "[ 0.05 0.5 1 ]"
+	$phongexponenttexture models/weapons/tfa_ins2\stalker_comrade\bolt\bolt_exponent
+}
+
+
+
+

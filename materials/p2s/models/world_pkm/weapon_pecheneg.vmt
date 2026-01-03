@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+"$basetexture" "p2s\models\world_pkm\weapon_pecheneg"
+"$bumpmap" "p2s\models\world_pkm\weapon_pecheneg_norm"
+"$nocull" "1"
+"$halflambert" "1"
+"$phong" "1"
+"$phongexponenttexture" "p2s\models\world_pkm\weapon_pecheneg_gloss"
+"$phongboost" "2"
+"$phongfresnelranges" "[ 0.1 0.5 1 ]"
+}

@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models\weapons\panzerfaust3_sandstorm\panzefaust_reticle"
+	"$translucent" 1
+}

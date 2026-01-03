@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/rpg28/rpg28_launcher"
+		
+	"$phong" "1"						
+	"$phongboost" "0.1"
+	"$phongexponent" "5"						
+	"$phongfresnelranges"	"[ .2 1.2 8]"	
+	"$halflambert" 1
+	"$PhongAlbedoTint" "1"		
+}
+	
+}

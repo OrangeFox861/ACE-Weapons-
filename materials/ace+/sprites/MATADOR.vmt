@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "ace+\sprites\MATADOR"
+			"$translucent" 1
+}

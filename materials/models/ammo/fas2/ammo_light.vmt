@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\ammo\fas2\ammo_light"
+
+	"$halflambert" 1
+}

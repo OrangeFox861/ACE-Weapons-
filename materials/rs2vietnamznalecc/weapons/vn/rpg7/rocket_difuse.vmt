@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "RS2VietnamZnalecc/Weapons/VN/RPG7/rocket_difuse"
+	"$bumpmap" "RS2VietnamZnalecc/Weapons/VN/RPG7/rocket_normal"
+	
+	"$phong" "1"						
+	"$phongboost" "0.1"
+	"$phongexponent" "5"						
+	"$phongfresnelranges"	"[ .2 1.2 8]"	
+	"$halflambert" 1
+	"$PhongAlbedoTint" "1"		
+
+	"$phongexponenttexture" "RS2VietnamZnalecc/Weapons/VN/RPG7/rocket_s"
+
+	
+}

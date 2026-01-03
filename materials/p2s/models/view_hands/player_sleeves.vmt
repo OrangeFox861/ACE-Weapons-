@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+"$basetexture" "p2s\models\view_hands\player_sleeves"
+"$bumpmap" "p2s\models\view_hands\player_sleeves_norm"
+"$nocull" "1"
+"$halflambert" "1"
+}

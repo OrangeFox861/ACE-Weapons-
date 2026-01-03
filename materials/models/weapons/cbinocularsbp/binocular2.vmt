@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\weapons\cbinocularsbp\binocular2"
+	"$bumpmap"			"models\weapons\cbinocularsbp\binocular2_n"
+
+	"$phong"  			"1"
+	"$phongexponent" 		"24"
+	"$phongboost" 			"0.5"
+	"$phongfresnelranges" 		"[2 4 6]"
+	"$phongtint" 			"[0.6 0.8 1]"
+	"$phongalbedotint" 		"1"	
+
+	"$envmap" 			"env_cubemap"
+	"$normalmapalphaenvmapmask" 	"1"
+	"$envmaptint"			"[0.06 0.06 0.06]"
+}

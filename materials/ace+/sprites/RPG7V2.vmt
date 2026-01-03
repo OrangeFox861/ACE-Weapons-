@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "ace+\sprites\RPG7V2"
+			"$translucent" 1
+}
