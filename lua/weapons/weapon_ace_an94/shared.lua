@@ -62,7 +62,7 @@ SWEP.ViewModel = "models/ace+/v_an94.mdl"
 SWEP.WorldModel = "models/ace+/w_an94.mdl"
 SWEP.HoldType = "ar2"
 SWEP.DeployDelay = 1 --Time before you can fire after deploying the weapon
-SWE.CSMuzzleFlashes = true
+SWEP.CSMuzzleFlashes = true
 SWEP.UseHands = true
 
 SWEP.SwayScale = -1
