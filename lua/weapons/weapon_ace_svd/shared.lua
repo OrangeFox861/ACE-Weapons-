@@ -42,14 +42,14 @@ SWEP.RecoilSideBias = 0.5 --How much the recoil is biased to one side proportion
 
 SWEP.ZoomRecoilBonus = 0.5 --Reduce recoil by this amount when zoomed or scoped
 SWEP.CrouchRecoilBonus = 0.5 --Reduce recoil by this amount when crouching
-SWEP.ViewPunchAmount = 7.5 --Degrees to punch the view upwards each shot - does not actually move crosshair, just a visual effect
+SWEP.ViewPunchAmount = 4 --Degrees to punch the view upwards each shot - does not actually move crosshair, just a visual effect
 
 
 --Spread (aimcone) settings--
 SWEP.BaseSpread = 0 --First-shot random spread, in degrees
 SWEP.MaxSpread = 3 --Maximum added random spread from heat value, in degrees
 					--If HeatMax is 0 this will be ignored and only BaseSpread will be taken into account (AT4 for example)
-SWEP.MovementSpread = 3 --Increase aimcone to this many degrees when sprinting at full speed
+SWEP.MovementSpread = 1 --Increase aimcone to this many degrees when sprinting at full speed
 SWEP.UnscopedSpread = 0 --Spread, in degrees, when unscoped with a scoped weapon
 
 SWEP.CarrySpeedMul			= 0.85

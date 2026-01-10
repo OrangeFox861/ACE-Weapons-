@@ -53,7 +53,7 @@ SWEP.AccurateCrosshair = true
 SWEP.BaseSpread = 0.1 --First-shot random spread, in degrees
 SWEP.MaxSpread = 1.5 --Maximum added random spread from heat value, in degrees
 					--If HeatMax is 0 this will be ignored and only BaseSpread will be taken into account (AT4 for example)
-SWEP.MovementSpread = 4 --Increase aimcone to this many degrees when sprinting at full speed
+SWEP.MovementSpread = 1 --Increase aimcone to this many degrees when sprinting at full speed
 SWEP.UnscopedSpread = 0.4 --Spread, in degrees, when unscoped with a scoped weapon
 
 --Model settings--
@@ -147,8 +147,8 @@ function SWEP:InitBulletData()
 	self.BulletData.Type = "AP"
 	self.BulletData.Id = 1
 	self.BulletData.Caliber = 0.762
-	self.BulletData.PropLength = 4.8 --Volume of the case as a cylinder * Powder density converted from g to kg
-	self.BulletData.ProjLength = 3 --Volume of the projectile as a cylinder * streamline factor (Data5) * density of steel
+	self.BulletData.PropLength = 6.5 --Volume of the case as a cylinder * Powder density converted from g to kg
+	self.BulletData.ProjLength = 3.5 --Volume of the projectile as a cylinder * streamline factor (Data5) * density of steel
 	self.BulletData.Data5 = 0  --He Filler or Flechette count
 	self.BulletData.Data6 = 0 --HEAT ConeAng or Flechette Spread
 	self.BulletData.Data7 = 0
@@ -171,7 +171,7 @@ function SWEP:InitBulletData()
 	self.BulletData.MuzzleVel = ACF_MuzzleVelocity(self.BulletData.PropMass, self.BulletData.ProjMass, self.BulletData.Caliber)
 	self.BulletData.ShovePower = 0.2
 	self.BulletData.KETransfert = 0.3
-	self.BulletData.PenArea = self.BulletData.FrArea ^ ACF.PenAreaMod * 1.1
+	self.BulletData.PenArea = self.BulletData.FrArea ^ ACF.PenAreaMod * 1.5
 	self.BulletData.Pos = Vector(0, 0, 0)
 	self.BulletData.LimitVel = 800
 	self.BulletData.Ricochet = 60

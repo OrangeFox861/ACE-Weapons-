@@ -156,3 +156,35 @@ ACE_DefineGunFireSound( "weapons/svd_multi.mp3",
 		}
 	}
 )
+
+--M200gilli
+
+ACE_DefineGunFireSound( "weapons/m200g_multi.mp3",
+	{
+		main = {
+			Volume	= 1,
+			Pitch	= 110,
+			Package = {
+				"customsound/content/m200g/close/close2.mp3",
+				"customsound/content/m200g/close/close3.mp3",
+			}
+		},
+		mid = {
+			Volume	= 1,
+			Pitch	= 100,
+			Package = {
+				"customsound/content/m200g/mid/close2.mp3",
+				"customsound/content/m200g/mid/close3.mp3",
+			}
+
+		},
+		far = {
+			Volume	= 1,
+			Pitch	= 100,
+			Package = {
+				"customsound/content/m200g/far/ASVAL_fire_semi_mid_01.mp3",
+				"customsound/content/m200g/far/ASVAL_fire_semi_mid_02.mp3",
+			}
+		}
+	}
+)

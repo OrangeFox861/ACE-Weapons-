@@ -53,7 +53,7 @@ SWEP.AccurateCrosshair = true
 SWEP.BaseSpread = 0 --First-shot random spread, in degrees
 SWEP.MaxSpread = 1 --Maximum added random spread from heat value, in degrees
 					--If HeatMax is 0 this will be ignored and only BaseSpread will be taken into account (AT4 for example)
-SWEP.MovementSpread = 4 --Increase aimcone to this many degrees when sprinting at full speed
+SWEP.MovementSpread = 1 --Increase aimcone to this many degrees when sprinting at full speed
 SWEP.UnscopedSpread = 0.4 --Spread, in degrees, when unscoped with a scoped weapon
 
 
@@ -143,7 +143,7 @@ function SWEP:InitBulletData()
 	self.BulletData.Type = "AP"
 	self.BulletData.Id = 1
 	self.BulletData.Caliber = 0.556
-	self.BulletData.PropLength = 10 --Volume of the case as a cylinder * Powder density converted from g to kg
+	self.BulletData.PropLength = 11.5 --Volume of the case as a cylinder * Powder density converted from g to kg
 	self.BulletData.ProjLength = 5 --Volume of the projectile as a cylinder * streamline factor (Data5) * density of steel
 	self.BulletData.Data5 = 0 --He Filler or Flechette count
 	self.BulletData.Data6 = 0 --HEAT ConeAng or Flechette Spread

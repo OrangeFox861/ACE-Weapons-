@@ -52,7 +52,7 @@ SWEP.AccurateCrosshair = true
 SWEP.BaseSpread = 0 --First-shot random spread, in degrees
 SWEP.MaxSpread = 1.5 --Maximum added random spread from heat value, in degrees
 					--If HeatMax is 0 this will be ignored and only BaseSpread will be taken into account (AT4 for example)
-SWEP.MovementSpread = 6 --Increase aimcone to this many degrees when sprinting at full speed
+SWEP.MovementSpread = 1.5 --Increase aimcone to this many degrees when sprinting at full speed
 SWEP.UnscopedSpread = 0 --Spread, in degrees, when unscoped with a scoped weapon
 
 

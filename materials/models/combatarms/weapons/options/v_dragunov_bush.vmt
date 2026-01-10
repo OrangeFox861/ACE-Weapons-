@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/combatarms/weapons/options/v_dragunov_bush"
+	"$translucent" 1
+}

@@ -1,6 +1,6 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "ace+/sprites/NLAW"
-	"$nolod" 1
+	"$basetexture" "ace+\sprites\NLAW"
 	"$translucent" 1
+	
 }
