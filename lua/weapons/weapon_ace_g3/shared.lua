@@ -100,7 +100,6 @@ if CLIENT then
 end
 
 
-SWEP.CarrySpeedMul			= 1 --WalkSpeedMult when carrying the weapon
 
 SWEP.NormalPlayerWalkSpeed	= 200 --Default walk and sprint speed in case all else fails
 SWEP.NormalPlayerRunSpeed	= 400

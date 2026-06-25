@@ -34,27 +34,27 @@ SWEP.ReticuleSize = 10
 SWEP.HeatReductionRate = 500 --Heat loss per second when not firing
 SWEP.HeatReductionDelay = 0.1 --Delay after firing before beginning to reduce heat
 SWEP.HeatPerShot = 7 --Heat generated per shot
-SWEP.HeatMax = 52.5 --Maximum heat - determines max rate at which recoil is applied to eye angles
+SWEP.HeatMax = 60 --Maximum heat - determines max rate at which recoil is applied to eye angles
 				--Also determines point at which random spread is at its highest intensity
 				--HeatMax divided by HeatPerShot gives you how many shots until you reach MaxSpread
 
-SWEP.AngularRecoil = 39.75	--Amount of angular recoil
+SWEP.AngularRecoil = 20.75	--Amount of angular recoil
 
 --How much the recoil is biased to one side proportional to vertical recoil
 --Positive numbers bias to the right, negative to the left
 SWEP.RecoilSideBias = 0.2
 
 SWEP.ZoomRecoilBonus = 0.5 --Reduce recoil by this amount when zoomed or scoped
-SWEP.CrouchRecoilBonus = 0.3 --Reduce recoil by this amount when crouching
-SWEP.ViewPunchAmount = 0.2 --Degrees to punch the view upwards each shot - does not actually move crosshair, just a visual effect
+SWEP.CrouchRecoilBonus = 0.2 --Reduce recoil by this amount when crouching
+SWEP.ViewPunchAmount = 0.4 --Degrees to punch the view upwards each shot - does not actually move crosshair, just a visual effect
 SWEP.AccurateCrosshair = true
 
 --Spread (aimcone) settings--
 SWEP.BaseSpread = 0 --First-shot random spread, in degrees
-SWEP.MaxSpread = 1 --Maximum added random spread from heat value, in degrees
+SWEP.MaxSpread = 0.5 --Maximum added random spread from heat value, in degrees
 					--If HeatMax is 0 this will be ignored and only BaseSpread will be taken into account (AT4 for example)
-SWEP.MovementSpread = 1 --Increase aimcone to this many degrees when sprinting at full speed
-SWEP.UnscopedSpread = 1 --Spread, in degrees, when unscoped with a scoped weapon
+SWEP.MovementSpread = 2 --Increase aimcone to this many degrees when sprinting at full speed
+SWEP.UnscopedSpread = 0.4 --Spread, in degrees, when unscoped with a scoped weapon
 
 
 --Model settings--
@@ -65,6 +65,10 @@ SWEP.HoldType = "ar2"
 SWEP.DeployDelay = 1 --Time before you can fire after deploying the weapon
 SWEP.CSMuzzleFlashes = true
 SWEP.UseHands = true
+
+SWEP.CarrySpeedMul			= 0.6 --WalkSpeedMult when carrying the weapon
+
+
 if CLIENT then
 	local WorldModel = ClientsideModel(SWEP.WorldModel)
 

@@ -12,7 +12,7 @@ SWEP.Author = " "
 SWEP.FireRate = 0.18 --Rounds per second
 
 SWEP.Primary.ClipSize = 1
-SWEP.Primary.DefaultClip = 1
+SWEP.Primary.DefaultClip = 3
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "RPG_Round"
 SWEP.Primary.Sound = "acf_extra/cannons/mortars-launchers/mortar_81mm.wav"

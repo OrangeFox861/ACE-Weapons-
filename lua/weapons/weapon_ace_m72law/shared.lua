@@ -50,7 +50,6 @@ SWEP.MaxSpread = 0 --Maximum added random spread from heat value, in degrees
 SWEP.MovementSpread = 10 --Increase aimcone to this many degrees when sprinting at full speed
 SWEP.UnscopedSpread = 7 --Spread, in degrees, when unscoped with a scoped weapon
 
-SWEP.CarrySpeedMul			= 0.87
 
 --Model settings--
 SWEP.ViewModelFlip = false
@@ -103,6 +102,7 @@ pos = pos + ang:Right() * 2 + ang:Up() * -5 + ang:Forward() * 10
 return pos, ang
 end
 
+SWEP.CarrySpeedMul = 0.87
 
 function SWEP:InitBulletData()
 	self.BulletData = {}

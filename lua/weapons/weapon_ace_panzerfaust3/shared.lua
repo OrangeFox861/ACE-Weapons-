@@ -226,8 +226,8 @@ function SWEP:PrimaryAttack()
 				ArmorThickness = 8,
 
 				MotorSound = "acf_extra/cannons/120mm-240mm/cannon_120mm/cannon_120mm_m256.wav",
-				BoostEffect = "rocket_smoke",
-				MotorEffect = "rocket_smoke"
+				BoostEffect = "CommandPointer",
+				MotorEffect = "CommandPointer"
 			}
 			local BData = self.BulletData
 			BData.BulletData = nil

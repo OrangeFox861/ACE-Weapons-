@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/cw2_shark/cgm3/carl_m3_lense"
+	"$alphatest" "1"
+}

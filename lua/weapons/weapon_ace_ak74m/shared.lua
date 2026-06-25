@@ -133,6 +133,8 @@ sound.Add( {
     sound       = "Weapons/ar/ak74m/select.wav"
 } )
 
+
+
 function SWEP:InitBulletData()
 	self.BulletData = {}
 	self.BulletData.Id = "7.62mmMG"
@@ -147,7 +149,7 @@ function SWEP:InitBulletData()
 	self.BulletData.Data8 = 0
 	self.BulletData.Data9 = 0
 	self.BulletData.Data10 = 1 -- Tracer
-	self.BulletData.Colour = Color(0, 170, 0)
+	self.BulletData.Colour = Color(0, 120, 0)
 	--
 	self.BulletData.Data13 = 0 --THEAT ConeAng2
 	self.BulletData.Data14 = 0 --THEAT HE Allocation

@@ -12,7 +12,7 @@ SWEP.Author = " "
 SWEP.FireRate = 0.2 --Rounds per second
 
 SWEP.Primary.ClipSize = 1
-SWEP.Primary.DefaultClip = 1
+SWEP.Primary.DefaultClip = 2
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "RPG_Round"
 SWEP.Primary.Sound = "acf_extra/cannons/120mm-240mm/cannon_120mm/jsrs_poppy_120mm.wav"

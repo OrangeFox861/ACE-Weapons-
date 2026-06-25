@@ -45,7 +45,7 @@ SWEP.AngularRecoil = 45	--Amount of angular recoil
 SWEP.RecoilSideBias = 0.25
 
 SWEP.ZoomRecoilBonus = 0.5 --Reduce recoil by this amount when zoomed or scoped
-SWEP.CrouchRecoilBonus = 0.5 --Reduce recoil by this amount when crouching
+SWEP.CrouchRecoilBonus = 0.2 --Reduce recoil by this amount when crouching
 SWEP.ViewPunchAmount = 0.3 --Degrees to punch the view upwards each shot - does not actually move crosshair, just a visual effect
 SWEP.AccurateCrosshair = true
 

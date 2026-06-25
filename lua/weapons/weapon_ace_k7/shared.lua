@@ -15,7 +15,7 @@ SWEP.Primary.ClipSize = 30
 SWEP.Primary.DefaultClip = 120
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "SMG1"
-SWEP.Primary.Sound = "ace_weapons/sweps/multi_sound/tmp_multi.mp3"
+SWEP.Primary.Sound = "weapons/asval_multi.mp3"
 SWEP.Primary.LightScale = 200 --Muzzleflash light radius
 SWEP.Primary.BulletCount = 1 --Number of bullets to fire each shot, used for shotguns
 

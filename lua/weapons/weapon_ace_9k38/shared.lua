@@ -70,7 +70,8 @@ SWEP.UseHands = true
 
 SWEP.FuseDelay = 0
 
-SWEP.CarrySpeedMul			= 0.7
+SWEP.CarrySpeedMul = 0.7
+
 
 SWEP.HeatAboveAmbient = 20 --Minimum Seeker Temp
 

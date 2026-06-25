@@ -102,7 +102,7 @@ if CLIENT then
 	end
 end
 
-SWEP.CarrySpeedMul			= 0.6
+SWEP.CarrySpeedMul = 0.6
 
 DEFINE_BASECLASS("weapon_ace_base")
 

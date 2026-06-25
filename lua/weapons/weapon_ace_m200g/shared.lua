@@ -54,7 +54,10 @@ SWEP.MaxSpread = 1.5 --Maximum added random spread from heat value, in degrees
 SWEP.MovementSpread = 5 --Increase aimcone to this many degrees when sprinting at full speed
 SWEP.UnscopedSpread = 5 --Spread, in degrees, when unscoped with a scoped weapon
 
-SWEP.CarrySpeedMul			= 0.7
+SWEP.CarrySpeedMul			= 0.6 --WalkSpeedMult when carrying the weapon
+
+SWEP.NormalPlayerWalkSpeed	= 250 --Default walk and sprint speed in case all else fails
+SWEP.NormalPlayerRunSpeed	= 550
 
 --Model settings--
 SWEP.ViewModelFlip = false

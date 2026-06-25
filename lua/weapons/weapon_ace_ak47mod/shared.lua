@@ -60,6 +60,7 @@ SWEP.BobScale = 1
 --Model settings--
 SWEP.ViewModelFlip = false
 SWEP.ViewModel = "models/ace+/v_ak47.mdl"
+SWEP.ViewModelFOV			= 60
 SWEP.WorldModel = "models/ace+/w_ak47.mdl"
 SWEP.HoldType = "ar2"
 SWEP.DeployDelay = 1 --Time before you can fire after deploying the weapon
@@ -114,8 +115,8 @@ SWEP.CarrySpeedMul			= 1 --WalkSpeedMult when carrying the weapon
 SWEP.NormalPlayerWalkSpeed	= 200 --Default walk and sprint speed in case all else fails
 SWEP.NormalPlayerRunSpeed	= 400
 
-SWEP.SwayScale = 0.3
-SWEP.BobScale = 0.4
+SWEP.SwayScale = 1
+SWEP.BobScale = 1
 
 sound.Add( {
     name = "CA.ak47.Magout",
@@ -162,7 +163,7 @@ function SWEP:InitBulletData()
 	self.BulletData.Data8 = 0
 	self.BulletData.Data9 = 0
 	self.BulletData.Data10 = 1 -- Tracer
-	self.BulletData.Colour = Color(0, 170, 0)
+	self.BulletData.Colour = Color(0, 120, 0)
 
 	self.BulletData.Data13 = 0 --THEAT ConeAng2
 	self.BulletData.Data14 = 0 --THEAT HE Allocation

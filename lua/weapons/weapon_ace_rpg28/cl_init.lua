@@ -68,7 +68,7 @@ function SWEP:DoDrawCrosshair(x, y)
 
 --        surface.DrawRect(x + 15, y + 180, 65, 2)
 
-surface.SetTexture( surface.GetTextureID( "ace+/sprites/RPG28" ) )
+surface.SetTexture( surface.GetTextureID( "ace+/sprites/rpg28" ) )
 surface.SetDrawColor( 255, 255, 255, 255 )
 surface.DrawTexturedRect( x - ScrH() / 2, y - ScrH() / 1.98, ScrH(), ScrH() )		
 			return true

@@ -1,7 +1,7 @@
 SWEP.PrintName = "L85A2"
 SWEP.Base = "weapon_ace_base"
 SWEP.Category = "ACE Weapons+"
-SWEP.SubCategory = "Assault Rifles"
+SWEP.SubCategory = "/PUBLIC TEST"
 SWEP.Purpose = "Bullpup scoped NATO shooter!"
 SWEP.Spawnable = true
 SWEP.Slot = 2 --Which inventory column the weapon appears in
@@ -31,29 +31,29 @@ SWEP.ReticuleSize = 10
 
 --Recoil (crosshair movement) settings--
 --"Heat" is a number that represents how long you've been firing, affecting how quickly your crosshair moves upwards
-SWEP.HeatReductionRate = 300 --Heat loss per second when not firing
-SWEP.HeatPerShot = 5 --Heat generated per shot
-SWEP.HeatMax = 37.5 --Maximum heat - determines max rate at which recoil is applied to eye angles
+SWEP.HeatReductionRate = 1000 --Heat loss per second when not firing
+SWEP.HeatPerShot = 18.75 --Heat generated per shot
+SWEP.HeatMax = 18.75 --Maximum heat - determines max rate at which recoil is applied to eye angles
 				--Also determines point at which random spread is at its highest intensity
 				--HeatMax divided by HeatPerShot gives you how many shots until you reach MaxSpread
 
-SWEP.AngularRecoil = 28	--Amount of angular recoil
+SWEP.AngularRecoil = 18.75	--Amount of angular recoil
 
 --How much the recoil is biased to one side proportional to vertical recoil
 --Positive numbers bias to the right, negative to the left
 SWEP.RecoilSideBias = 0.2
 
-SWEP.ZoomRecoilBonus = 0.5 --Reduce recoil by this amount when zoomed or scoped
-SWEP.CrouchRecoilBonus = 0.5 --Reduce recoil by this amount when crouching
-SWEP.ViewPunchAmount = 0.3 --Degrees to punch the view upwards each shot - does not actually move crosshair, just a visual effect
+SWEP.ZoomRecoilBonus = 0.7 --Reduce recoil by this amount when zoomed or scoped
+SWEP.CrouchRecoilBonus = 0.8 --Reduce recoil by this amount when crouching
+SWEP.ViewPunchAmount = 1 --Degrees to punch the view upwards each shot - does not actually move crosshair, just a visual effect
 SWEP.AccurateCrosshair = true
 
 --Spread (aimcone) settings--
 SWEP.BaseSpread = 0 --First-shot random spread, in degrees
-SWEP.MaxSpread = 1 --Maximum added random spread from heat value, in degrees
+SWEP.MaxSpread = 0 --Maximum added random spread from heat value, in degrees
 					--If HeatMax is 0 this will be ignored and only BaseSpread will be taken into account (AT4 for example)
-SWEP.MovementSpread = 1 --Increase aimcone to this many degrees when sprinting at full speed
-SWEP.UnscopedSpread = 0.5 --Spread, in degrees, when unscoped with a scoped weapon
+SWEP.MovementSpread = 4 --Increase aimcone to this many degrees when sprinting at full speed
+SWEP.UnscopedSpread = 0 --Spread, in degrees, when unscoped with a scoped weapon
 
 
 --Model settings--

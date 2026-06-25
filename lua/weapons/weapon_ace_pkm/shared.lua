@@ -31,12 +31,12 @@ SWEP.ReticuleSize = 10
 --Recoil (crosshair movement) settings--
 --"Heat" is a number that represents how long you've been firing, affecting how quickly your crosshair moves upwards
 SWEP.HeatReductionRate = 500 --Heat loss per second when not firing
-SWEP.HeatPerShot = 12 --Heat generated per shot
-SWEP.HeatMax = 45 --Maximum heat - determines max rate at which recoil is applied to eye angles
+SWEP.HeatPerShot = 10 --Heat generated per shot
+SWEP.HeatMax = 40 --Maximum heat - determines max rate at which recoil is applied to eye angles
 				--Also determines point at which random spread is at its highest intensity
 				--HeatMax divided by HeatPerShot gives you how many shots until you reach MaxSpread
 
-SWEP.AngularRecoil = 33.75	--Amount of angular recoil
+SWEP.AngularRecoil = 15.75	--Amount of angular recoil
 
 --How much the recoil is biased to one side proportional to vertical recoil
 --Positive numbers bias to the right, negative to the left
@@ -51,7 +51,7 @@ SWEP.AccurateCrosshair = true
 SWEP.BaseSpread = 0 --First-shot random spread, in degrees
 SWEP.MaxSpread = 0.5 --Maximum added random spread from heat value, in degrees
 					--If HeatMax is 0 this will be ignored and only BaseSpread will be taken into account (AT4 for example)
-SWEP.MovementSpread = 1 --Increase aimcone to this many degrees when sprinting at full speed
+SWEP.MovementSpread = 2 --Increase aimcone to this many degrees when sprinting at full speed
 SWEP.UnscopedSpread = 0.4 --Spread, in degrees, when unscoped with a scoped weapon
 
 --Model settings--
@@ -103,7 +103,7 @@ pos = pos + ang:Right() * 0 + ang:Up() * -1 + ang:Forward() * 0
 return pos, ang
 end
 
-SWEP.CarrySpeedMul			= 0.7 --WalkSpeedMult when carrying the weapon
+SWEP.CarrySpeedMul			= 0.6 --WalkSpeedMult when carrying the weapon
 
 SWEP.SwayScale = 0.3
 SWEP.BobScale = 0.4
@@ -174,7 +174,7 @@ function SWEP:InitBulletData()
 	self.BulletData.Data8 = 0
 	self.BulletData.Data9 = 0
 	self.BulletData.Data10 = 1 -- Tracer
-	self.BulletData.Colour = Color(0, 170, 0)
+	self.BulletData.Colour = Color(0, 120, 0)
 
 	self.BulletData.Data13 = 0 --THEAT ConeAng2
 	self.BulletData.Data14 = 0 --THEAT HE Allocation

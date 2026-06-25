@@ -32,7 +32,7 @@ SWEP.ReticuleSize = 10
 --Recoil (crosshair movement) settings--
 --"Heat" is a number that represents how long you've been firing, affecting how quickly your crosshair moves upwards
 SWEP.HeatReductionRate = 275 --Heat loss per second when not firing
-SWEP.HeatPerShot = 5.5 --Heat generated per shot
+SWEP.HeatPerShot = 6 --Heat generated per shot
 SWEP.HeatMax = 30 --Maximum heat - determines max rate at which recoil is applied to eye angles
 				--Also determines point at which random spread is at its highest intensity
 				--HeatMax divided by HeatPerShot gives you how many shots until you reach MaxSpread
