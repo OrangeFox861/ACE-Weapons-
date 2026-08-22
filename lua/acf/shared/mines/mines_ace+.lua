@@ -1,7 +1,7 @@
 
 
 
-ACE_DefineMine( "TM 62 AT Mine", {
+ACE.DefineMine( "TM 62 AT Mine", {
 
     name           = "TM 62 AT Mine",
     model          = "models/props_phx/games/chess/black_dama.mdl",
@@ -24,7 +24,7 @@ ACE_DefineMine( "TM 62 AT Mine", {
 
 } )
 
-ACE_DefineMine( "PMN AP mine", {
+ACE.DefineMine( "PMN AP mine", {
 
     name           = "PMN AP mine",
     model          = "models/dav0r/buttons/button.mdl",
@@ -47,7 +47,7 @@ ACE_DefineMine( "PMN AP mine", {
 
 } )
 
-ACE_DefineMine( "VS-50 AP mine", {
+ACE.DefineMine( "VS-50 AP mine", {
 
     name           = "VS-50 AP mine",
     model          = "models/xqm/button1.mdl",

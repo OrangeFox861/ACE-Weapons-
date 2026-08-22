@@ -1,5 +1,5 @@
 --test
-ACE_DefineGunFireSound( "weapons/test_multi.mp3",
+ACE.DefineGunFireSound( "weapons/test_multi.mp3",
 	{
 		main = {
 			Volume	= 1,
@@ -31,7 +31,7 @@ ACE_DefineGunFireSound( "weapons/test_multi.mp3",
 
 --G3
 
-ACE_DefineGunFireSound( "weapons/g3_multi.mp3",
+ACE.DefineGunFireSound( "weapons/g3_multi.mp3",
 	{
 		main = {
 			Volume	= 1,
@@ -63,7 +63,7 @@ ACE_DefineGunFireSound( "weapons/g3_multi.mp3",
 
 --АС ВАЛ
 
-ACE_DefineGunFireSound( "weapons/asval_multi.mp3",
+ACE.DefineGunFireSound( "weapons/asval_multi.mp3",
 	{
 		main = {
 			Volume	= 1,
@@ -95,7 +95,7 @@ ACE_DefineGunFireSound( "weapons/asval_multi.mp3",
 
 --СВ98
 
-ACE_DefineGunFireSound( "weapons/sv98_multi.mp3",
+ACE.DefineGunFireSound( "weapons/sv98_multi.mp3",
 	{
 		main = {
 			Volume	= 1,
@@ -127,7 +127,7 @@ ACE_DefineGunFireSound( "weapons/sv98_multi.mp3",
 
 --СВД
 
-ACE_DefineGunFireSound( "weapons/svd_multi.mp3",
+ACE.DefineGunFireSound( "weapons/svd_multi.mp3",
 	{
 		main = {
 			Volume	= 1,
@@ -159,7 +159,7 @@ ACE_DefineGunFireSound( "weapons/svd_multi.mp3",
 
 --M200gilli
 
-ACE_DefineGunFireSound( "weapons/m200g_multi.mp3",
+ACE.DefineGunFireSound( "weapons/m200g_multi.mp3",
 	{
 		main = {
 			Volume	= 1,
