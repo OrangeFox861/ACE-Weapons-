@@ -239,7 +239,7 @@ function SWEP:PrimaryAttack()
 			BData.Crate = BData.FakeCrate:EntIndex()
 			--self:DeleteOnRemove(BData.FakeCrate)
 
-			GenerateMissile(MDat,BData.FakeCrate,BData)
+			ACE_GenerateMissile(MDat,BData.FakeCrate,BData)
 
 		self:EmitSound(self.Primary.Sound)
 		self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)

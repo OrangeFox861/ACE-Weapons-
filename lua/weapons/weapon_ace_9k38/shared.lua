@@ -442,7 +442,7 @@ local MDat = {
 		BData.Crate = BData.FakeCrate:EntIndex()
 		--self:DeleteOnRemove(BData.FakeCrate)
 
-		local MisEnt = GenerateMissile(MDat,BData.FakeCrate,BData)
+		local MisEnt = ACE_GenerateMissile(MDat,BData.FakeCrate,BData)
 		MisEnt.TargetPos = self.TarEnt:GetPos()
 
 		--self.MissileEntity.TargetPos
