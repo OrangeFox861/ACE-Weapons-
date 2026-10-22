@@ -1,5 +1,8 @@
 SWEP.PrintName = "9K32 Strela-2"
 SWEP.Base = "weapon_ace_base"
+
+include("acf/shared/sh_ace_launchfx.lua")
+
 SWEP.Category = "ACE Weapons+"
 SWEP.SubCategory = "Special"
 SWEP.Purpose = "Strela-2 (GRAU index - 9K32, according to the classification of the US Ministry of Defense and NATO SA-7 Grail) - Soviet portable anti-aircraft missile system"
@@ -94,6 +97,59 @@ function SWEP:SetupDataTables()
 	BaseClass.SetupDataTables(self)
 end
 
+--Fire / launch effects--
+--Every sub-effect can be removed with Enabled = false, resized with Scale/Radius,
+--moved with Offset (local muzzle axes: X forward, Y right, Z up) and replaced with
+--any other effect/particle by changing Name (and Type to "particle").
+SWEP.LaunchEffect = {
+	Enabled = true,
+
+	--Flash is scalable through Radius. Other usable effect names: "ace_heat_explosion",
+	--"ace_scaled_explosion" (both play an explosion sound), or a particle such as
+	--"ACFM_Flare" ("ace_muzzleflash" needs an entity gun and will not work on a SWEP).
+	Flash = {
+		Type = "effect",
+		Name = "ace_launchflash",
+		Scale = 1,
+		Radius = 35,
+		Offset = Vector(35, 0, -5),
+		Angle = Angle(0, 0, 0),
+		Delay = 0,
+	},
+
+	Backblast = {
+		Type = "effect",
+		Name = "ace_launchsmoke",
+		Scale = 1,
+		Radius = 35,
+		Magnitude = 12,
+		Color = Color(200, 200, 200),
+		Offset = Vector(-45, 0, -8),
+		Reverse = true,
+		Delay = 0,
+	},
+
+	Smoke = {
+		Type = "effect",
+		Name = "ace_launchsmoke",
+		Scale = 1,
+		Radius = 50,
+		Magnitude = 20,
+		Color = Color(200, 200, 200),
+		Offset = Vector(35, 0, -5),
+		Delay = 0.12,
+	},
+
+	Light = {
+		Enabled = true,
+		Radius = 350,
+		Brightness = 3,
+		Color = Color(255, 140, 60),
+		Offset = Vector(35, 0, -5),
+	},
+}
+
+
 if CLIENT then
 	local WorldModel = ClientsideModel(SWEP.WorldModel)
 
@@ -135,7 +191,7 @@ end
 function SWEP:InitBulletData()
 	self.BulletData = {}
 	self.BulletData.Id = "75mmHW"
-	self.BulletData.Type = "HE"
+	self.BulletData.Type = "HEAT"
 	self.BulletData.Id = 2
 	self.BulletData.Caliber = 7.2
 	self.BulletData.PropLength = 7.75 --Volume of the case as a cylinder * Powder density converted from g to kg
@@ -443,6 +499,7 @@ local MDat = {
 		--self:DeleteOnRemove(BData.FakeCrate)
 
 		local MisEnt = ACE_GenerateMissile(MDat,BData.FakeCrate,BData)
+		ACE.PlayLaunchEffect(self, self.LaunchEffect)
 		MisEnt.TargetPos = self.TarEnt:GetPos()
 
 		--self.MissileEntity.TargetPos

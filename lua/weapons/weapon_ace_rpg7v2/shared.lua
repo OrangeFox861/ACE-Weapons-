@@ -1,5 +1,8 @@
 SWEP.PrintName = "RPG 7v2 (PG-7VL)"
 SWEP.Base = "weapon_ace_base"
+
+include("acf/shared/sh_ace_launchfx.lua")
+
 SWEP.Category = "ACE Weapons+"
 SWEP.SubCategory = "Special"
 SWEP.Purpose = "Сult slavic RPG"
@@ -44,11 +47,11 @@ SWEP.ViewPunchAmount = 10 --Degrees to punch the view upwards each shot - does n
 
 
 --Spread (aimcone) settings--
-SWEP.BaseSpread = 0.75 --First-shot random spread, in degrees
+SWEP.BaseSpread = 0 --First-shot random spread, in degrees
 SWEP.MaxSpread = 0 --Maximum added random spread from heat value, in degrees
 					--If HeatMax is 0 this will be ignored and only BaseSpread will be taken into account (AT4 for example)
-SWEP.MovementSpread = 10 --Increase aimcone to this many degrees when sprinting at full speed
-SWEP.UnscopedSpread = 7 --Spread, in degrees, when unscoped with a scoped weapon
+SWEP.MovementSpread = 0 --Increase aimcone to this many degrees when sprinting at full speed
+SWEP.UnscopedSpread = 0 --Spread, in degrees, when unscoped with a scoped weapon
 
 SWEP.CarrySpeedMul			= 0.7
 
@@ -60,6 +63,60 @@ SWEP.HoldType = "rpg"
 SWEP.DeployDelay = 4 --Time before you can fire after deploying the weapon
 SWEP.CSMuzzleFlashes = false
 SWEP.UseHands = true
+
+
+--Fire / launch effects--
+--Every sub-effect can be removed with Enabled = false, resized with Scale/Radius,
+--moved with Offset (local muzzle axes: X forward, Y right, Z up) and replaced with
+--any other effect/particle by changing Name (and Type to "particle").
+SWEP.LaunchEffect = {
+	Enabled = true,
+
+	--Flash is scalable through Radius. Other usable effect names: "ace_heat_explosion",
+	--"ace_scaled_explosion" (both play an explosion sound), or a particle such as
+	--"ACFM_Flare" ("ace_muzzleflash" needs an entity gun and will not work on a SWEP).
+	Flash = {
+		Type = "effect",
+		Name = "ace_launchflash",
+		Scale = 1,
+		Radius = 19,
+		Offset = Vector(-20, 0, -5),
+		Angle = Angle(0, 0, 0),
+		Reverse = true,
+		Delay = 0.0001,
+	},
+
+	Backblast = {
+		Type = "effect",
+		Name = "ace_launchsmoke",
+		Scale = 1,
+		Radius = 25,
+		Magnitude = 20,
+		Color = Color(200, 200, 200),
+		Offset = Vector(-20, 0, -8),
+		Reverse = true,
+		Delay = 0.001,
+	},
+
+	Smoke = {
+		Type = "effect",
+		Name = "ace_launchsmoke",
+		Scale = 1,
+		Radius = 19,
+		Magnitude = 20,
+		Color = Color(200, 200, 200),
+		Offset = Vector(30, 0, -5),
+		Delay = 0.001,
+	},
+
+	Light = {
+		Enabled = true,
+		Radius = 350,
+		Brightness = 3,
+		Color = Color(255, 140, 60),
+		Offset = Vector(35, 0, -5),
+	},
+}
 
 
 if CLIENT then
@@ -93,6 +150,9 @@ if CLIENT then
 			WorldModel:SetPos(self:GetPos())
 			WorldModel:SetAngles(self:GetAngles())
 		end
+
+		local ready = CurTime() >= self:GetNextPrimaryFire()
+		WorldModel:SetBodygroup(3, ready and 0 or 2)
 
 		WorldModel:DrawModel()
 	end
@@ -245,6 +305,7 @@ function SWEP:PrimaryAttack()
 			--self:DeleteOnRemove(BData.FakeCrate)
 
 			ACE_GenerateMissile(MDat,BData.FakeCrate,BData)
+			ACE.PlayLaunchEffect(self, self.LaunchEffect)
 
 		self:EmitSound(self.Primary.Sound)
 		self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)

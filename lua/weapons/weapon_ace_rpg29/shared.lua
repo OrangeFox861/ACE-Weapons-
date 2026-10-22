@@ -1,5 +1,8 @@
 SWEP.PrintName = "RPG 29"
 SWEP.Base = "weapon_ace_base"
+
+include("acf/shared/sh_ace_launchfx.lua")
+
 SWEP.Category = "ACE Weapons+"
 SWEP.SubCategory = "Special"
 SWEP.Purpose = "old heavy slavic RPG"
@@ -63,6 +66,60 @@ SWEP.UseHands = true
 
 
 SWEP.ViewModelFOV			= 50
+
+--Fire / launch effects--
+--Every sub-effect can be removed with Enabled = false, resized with Scale/Radius,
+--moved with Offset (local muzzle axes: X forward, Y right, Z up) and replaced with
+--any other effect/particle by changing Name (and Type to "particle").
+SWEP.LaunchEffect = {
+	Enabled = true,
+
+	--Flash is scalable through Radius. Other usable effect names: "ace_heat_explosion",
+	--"ace_scaled_explosion" (both play an explosion sound), or a particle such as
+	--"ACFM_Flare" ("ace_muzzleflash" needs an entity gun and will not work on a SWEP).
+	Flash = {
+		Type = "effect",
+		Name = "ace_launchflash",
+		Scale = 1,
+		Radius = 29,
+		Offset = Vector(-60, 0, -5),
+		Angle = Angle(0, 0, 0),
+		Reverse = true,
+		Delay = 0.0001,
+	},
+
+	Backblast = {
+		Type = "effect",
+		Name = "ace_launchsmoke",
+		Scale = 1,
+		Radius = 38,
+		Magnitude = 20,
+		Color = Color(200, 200, 200),
+		Offset = Vector(-30, 0, -8),
+		Reverse = true,
+		Delay = 0.001,
+	},
+
+	Smoke = {
+		Type = "effect",
+		Name = "ace_launchsmoke",
+		Scale = 1,
+		Radius = 29,
+		Magnitude = 20,
+		Color = Color(200, 200, 200),
+		Offset = Vector(60, 0, -5),
+		Delay = 0.001,
+	},
+
+	Light = {
+		Enabled = true,
+		Radius = 350,
+		Brightness = 3,
+		Color = Color(255, 140, 60),
+		Offset = Vector(35, 0, -5),
+	},
+}
+
 
 if CLIENT then
 	local WorldModel = ClientsideModel(SWEP.WorldModel)
@@ -257,6 +314,7 @@ function SWEP:PrimaryAttack()
 			--self:DeleteOnRemove(BData.FakeCrate)
 
 			ACE_GenerateMissile(MDat,BData.FakeCrate,BData)
+			ACE.PlayLaunchEffect(self, self.LaunchEffect)
 
 		self:EmitSound(self.Primary.Sound)
 		self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
